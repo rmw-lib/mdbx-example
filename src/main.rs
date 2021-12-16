@@ -1,7 +1,5 @@
 use anyhow::Result;
 use mdbx::prelude::*;
-use mdbx::r#type::{FromMdbx, ToAsRef};
-use mdbx::{tx::PtrTx, val::MDBX_val, val_bytes};
 use speedy::{Readable, Writable};
 
 #[derive(PartialEq, Debug, Readable, Writable)]

@@ -9,6 +9,6 @@ edition = "2021"
 anyhow = "1.0.51"
 ctor = "0.1.21"
 lazy_static = "1.4.0"
-mdbx = "0.0.4"
+mdbx = {path="../"}
 paste = "1.0.6"
 speedy = "0.8.0"
