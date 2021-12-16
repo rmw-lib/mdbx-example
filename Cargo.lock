@@ -120,7 +120,9 @@ dependencies = [
 
 [[package]]
 name = "mdbx"
-version = "0.0.4"
+version = "0.0.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b9750917500c4d4afc313049d94a5825070f5081c83cf181302278d22c8ae5ec"
 dependencies = [
  "anyhow",
  "ctor",
