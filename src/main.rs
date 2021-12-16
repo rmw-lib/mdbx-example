@@ -25,7 +25,6 @@ impl ToAsRef<City, Vec<u8>> for City {
 env_rw!(MDBX, {
   let mut db_path = std::env::current_exe().unwrap();
   db_path.set_extension("mdb");
-  println!("mdbx file path {}", db_path.display());
   db_path.into()
 });
 
