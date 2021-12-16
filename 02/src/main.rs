@@ -1,23 +1,12 @@
 use anyhow::Result;
 use mdbx::prelude::*;
+use mdbx_speedy::MdbxSpeedy;
 use speedy::{Readable, Writable};
 
-#[derive(PartialEq, Debug, Readable, Writable)]
+#[derive(PartialEq, Debug, Readable, Writable, MdbxSpeedy)]
 pub struct City {
   name: String,
   lnglat: (u32, u32),
-}
-
-impl FromMdbx for City {
-  fn from_mdbx(_: PtrTx, val: MDBX_val) -> Self {
-    Self::read_from_buffer(val_bytes!(val)).unwrap()
-  }
-}
-
-impl ToAsRef<City, Vec<u8>> for City {
-  fn to_as_ref(&self) -> Vec<u8> {
-    self.write_to_vec().unwrap()
-  }
 }
 
 env_rw!(MDBX, {
